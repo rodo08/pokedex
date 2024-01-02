@@ -1,3 +1,5 @@
+"use strict";
+
 const main = document.querySelector("#main");
 const listaPokemon = document.querySelector("#listaPokemon");
 const botonesHeader = document.querySelectorAll(".btn-header");
@@ -51,6 +53,32 @@ const mostrarPokemon = (data) => {
                              <p class="stat">${data.height / 10} M height</p>
                              <p class="stat">${data.weight} kg</p>
                          </div>
-                                             </div>`;
+                  </div>`;
   listaPokemon.append(div);
 };
+
+botonesHeader.forEach((boton) => {
+  //console.log(boton);
+  boton.addEventListener("click", (event) => {
+    const botonId = event.currentTarget.id;
+    //console.log(botonId);
+    listaPokemon.innerHTML = "";
+
+    const pokeLoopTypes = async () => {
+      for (let i = 1; i <= 151; i++) {
+        const res = await fetch(url + i);
+        const data = await res.json();
+
+        if (botonId === "ver-todos") {
+          mostrarPokemon(data);
+        }
+
+        const tipos = await data?.types?.map((type) => type?.type?.name);
+        if (tipos.some((tipo) => tipo.includes(botonId))) {
+          mostrarPokemon(data);
+        }
+      }
+    };
+    pokeLoopTypes();
+  });
+});
