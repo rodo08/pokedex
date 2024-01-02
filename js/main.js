@@ -9,7 +9,6 @@ const pokeLoop = async () => {
   for (let i = 1; i <= 151; i++) {
     const res = await fetch(url + i);
     const data = await res.json();
-    //console.log(data);
     mostrarPokemon(data);
   }
 };
@@ -29,7 +28,6 @@ const mostrarPokemon = (data) => {
   } else if (pokeId.length === 2) {
     pokeId = "0" + pokeId;
   }
-  //console.log(pokeId);
 
   const div = document.createElement("div");
   div.classList.add("pokemon");
@@ -58,10 +56,9 @@ const mostrarPokemon = (data) => {
 };
 
 botonesHeader.forEach((boton) => {
-  //console.log(boton);
   boton.addEventListener("click", (event) => {
     const botonId = event.currentTarget.id;
-    //console.log(botonId);
+
     listaPokemon.innerHTML = "";
 
     const pokeLoopTypes = async () => {
