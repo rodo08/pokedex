@@ -1,4 +1,4 @@
-# Pokédex - a PokeAPI Pokémon List Filter
+# Pokédex: a PokeAPI Pokémon List Filter
 
 This repository showcases an application that utilizes the PokeAPI to list the initial 151 Pokémon, allowing users to filter them by type through a customizable button panel. The project is inspired by the freeCodeCamp exercise but is enhanced with personalized styles and images, reflecting a unique design approach.
 
@@ -19,6 +19,10 @@ This repository showcases an application that utilizes the PokeAPI to list the i
 - **CSS3:** Styling the user interface to provide an aesthetically pleasing and responsive design.
 
 - **JavaScript (ES6+):** Implementing dynamic functionality, PokeAPI integration, and asynchronous operations using `async/await`.
+
+## Online Application
+
+- [PokeLink](https://rrm-pokedex.netlify.app/)
 
 ## Acknowledgments
 
