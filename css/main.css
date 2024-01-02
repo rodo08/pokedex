@@ -4,7 +4,6 @@
   --clr-black: #1c1c1c;
   --clr-gray: #ececec;
   --clr-white: #f7f7f7;
-
   --type-normal: #a8a878;
   --type-fire: #f08030;
   --type-water: #6890f0;
@@ -45,10 +44,6 @@ button {
   border: 0;
   border-radius: 0;
 }
-
-/* Aquí todo el CSS extra */
-
-/* Aquí comienzan los colores de botones según tipo */
 
 .ver-todos {
   background-color: var(--clr-white);
